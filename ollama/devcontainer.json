@@ -1,5 +1,5 @@
 {
-  "name": "Ollama with NVIDIA GPU Support",
+  "name": "Ollama",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".",
@@ -9,7 +9,15 @@
       "USER_PASSWORD": "vscode"
     }
   },
-  "runArgs": ["--gpus=all", "-v", "ollama:/root/.ollama", "-p", "11434:11434", "--name", "ollama"],
+  "runArgs": [
+    "--gpus=all",
+    "-v",
+    "ollama:/root/.ollama",
+    "-p",
+    "11434:11434",
+    "--name",
+    "ollama-nvidia"
+  ],
   "customizations": {
     "vscode": {
       "settings": {
