@@ -9,7 +9,7 @@
       "USER_PASSWORD": "vscode"
     }
   },
-  "runArgs": ["--gpus=all", "-v", "ollama:/root/.ollama", "-p", "11434:11434"],
+  "runArgs": ["--gpus=all", "-v", "ollama:/root/.ollama", "-p", "11434:11434", "--name", "ollama"],
   "customizations": {
     "vscode": {
       "settings": {
@@ -71,7 +71,5 @@
       ]
     }
   },
-  "remoteUser": "vscode",
-  // "postStartCommand": "sudo ollama serve",
-  // "overrideCommand": false
+  "remoteUser": "vscode"
 }
